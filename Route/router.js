@@ -25,7 +25,7 @@ router.get('/recent', async(req, res) => {
 router.post('/upload', async (req, res) => {
 
     const storage = multer.diskStorage({
-        destination: "../Client/public/uploads",
+        destination: "./public/uploads",
         filename: function (req, file, cb) {
           cb(null, file.originalname);
         },
